@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<teachers>
+  <teacher id="1" 地区="南昌">
+    <name 类别="中文">张三</name>
+    <salary>10000</salary>
+    <age>25</age>
+  </teacher>
+  <teacher id="34" 地区="上海">
+    <name 类别="English">Hugo</name>
+    <salary>20000</salary>
+    <age>23</age>
+  </teacher>
+</teachers>

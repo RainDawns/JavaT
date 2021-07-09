@@ -1,0 +1,51 @@
+agepackage com.briup.mvc;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class User {
+	private String name;
+	private String age;
+	private String pwd;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + ", pwd=" + pwd + "]";
+	}
+	public User(String name, String age, String pwd) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.pwd = pwd;
+	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+}age
+
+
+
+
+
+
+
+
