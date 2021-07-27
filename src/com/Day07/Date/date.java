@@ -52,6 +52,7 @@ public class date {
 
         /*
         * 传入的参数是毫秒  得出的时间是自从1970/01/01 00:00:00 000   过去了多少毫秒
+        * 这里表示前一天的时间   >>>>>>
         * */
         Date time1=new Date(System.currentTimeMillis()-1000*60*60*24);
         String s11=s.format(time1);

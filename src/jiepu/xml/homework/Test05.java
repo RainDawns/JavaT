@@ -17,6 +17,7 @@ public class Test05 {
         String path="src/jiepu/xml/homework/Teacher.xml";
         output(path);
         duqu(path);
+        you();
     }
     public static void output(String path) {
         try {
@@ -73,6 +74,10 @@ public class Test05 {
             huoqu(ele);
             System.out.println("</" + ele.getName() + ">");
         }
+    }
+
+    public  static void you(){
+        System.out.println(667+898);
     }
 
 }

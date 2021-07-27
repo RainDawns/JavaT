@@ -62,7 +62,6 @@ public class Test01 {
                     }
                 }
             }
-
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -84,12 +83,9 @@ public class Test01 {
             Myhander my=new Myhander();
             saxParser.parse(path,my );
             List<String> s = my.s;
-
-
             for (int i = 1; i < s.size()-1; i=i+3) {
                 int x=i+1;
                 if (map.containsKey(s.get(i))) {
-
                     double v = map.get(s.get(i)) +Double.parseDouble(s.get(x));
                     map.put(s.get(i),v );
                 } else {
