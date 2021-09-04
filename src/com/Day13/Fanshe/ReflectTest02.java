@@ -20,7 +20,7 @@ public class ReflectTest02 {
      *
      * */
 
-        Class  stu=Class.forName("jiepu.Java.FanShe.Student");
+        Class  stu=Class.forName("systematicLearn.Java.FanShe.Student");
         Field[] fields = stu.getFields();
         System.out.println(fields[0]);
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");

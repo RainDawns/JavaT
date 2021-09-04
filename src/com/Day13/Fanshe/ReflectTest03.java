@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
 public class ReflectTest03 {
     public static void main(String[] args) throws Exception {
         //
-        Class stu=Class.forName("jiepu.Java.FanShe.Student");
+        Class stu=Class.forName("systematicLearn.Java.FanShe.Student");
         //实例化对象
         Object o = stu.newInstance();
         //获取属性
