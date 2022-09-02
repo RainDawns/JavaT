@@ -1,5 +1,10 @@
 package com.Day13.Fanshe;
 
+import com.Day13.bean.User;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ResourceBundle;
 
 /**
@@ -23,6 +28,33 @@ public class ResourceBundTest {
         ResourceBundle bundle=ResourceBundle.getBundle("com/Day13/Classinfo");
         String s = bundle.getString("ClassName");
         System.out.println(s);
+        try {
+            Class<?> aClass = Class.forName(s);
+            User user = (User)aClass.newInstance();
+            Method[] declaredMethods = aClass.getDeclaredMethods();
+            Constructor<?>[] constructors = aClass.getConstructors();
+            Object o=null;
+            for (Constructor c:constructors){
+                o = c.newInstance();
+            }
+            if (o instanceof User){
+                User newUser=(User) o;
+                System.out.println(newUser.getName()+"======方法构造");
+            }
+
+            for (Method m:declaredMethods){
+                System.out.println(m);
+            }
+            System.out.println(user.getName());
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
